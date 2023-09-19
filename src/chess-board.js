@@ -12,3 +12,10 @@ export const createBoard = () => {
   }
   document.body.appendChild(board);
 };
+
+export const samePos = (posOne, posTwo) => {
+  if (posOne[0] === posTwo[0] && posOne[1] === posTwo[1]) {
+    return true;
+  }
+  return false;
+};
