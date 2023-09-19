@@ -6,7 +6,7 @@ import "./style.css";
 
 // Create the knight and board in the DOM
 createBoard();
-const knight = Knight();
+export const knight = Knight();
 // Moves the knight to its start of 0, 0
 knight.move(0, 0);
 
