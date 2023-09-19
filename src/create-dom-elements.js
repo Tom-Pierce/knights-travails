@@ -45,4 +45,14 @@ function createImage(imgSrc, imgId, ...imgClasses) {
   return img;
 }
 
-export { createDiv, createParagraph, createImage, createSpan };
+function createHeader(headerType, headerText, headerId, ...headerClasses) {
+  const header = document.createElement(headerType);
+  if (headerId) header.id = headerId;
+  header.textContent = headerText;
+  headerClasses.forEach((headerClass) => {
+    header.classList.add(headerClass);
+  });
+  return header;
+}
+
+export { createDiv, createParagraph, createImage, createSpan, createHeader };

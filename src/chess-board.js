@@ -15,7 +15,6 @@ export const createBoard = () => {
           parseInt(event.target.classList[1].split("-")[1][0], 10),
           parseInt(event.target.classList[1].split("-")[1][1], 10),
         ];
-        console.log(end, [knight.x, knight.y]);
         knightMoves(end, [knight.x, knight.y]);
       });
       rowDiv.appendChild(square);

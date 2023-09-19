@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --chess-board-size: 70vh;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,11 +16,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", arial;
+  gap: 10px;
 }
 
 .board {
-  width: 80vh;
-  height: 80vh;
+  width: var(--chess-board-size);
+  height: var(--chess-board-size);
   display: flex;
   flex-direction: column;
 }
@@ -25,8 +35,8 @@ body {
 
 .square {
   border: 1px solid black;
-  width: 10vh;
-  height: 10vh;
+  width: calc(var(--chess-board-size) / 8);
+  height: calc(var(--chess-board-size) / 8);
 }
 
 .row:nth-child(even) .square:nth-child(odd) {
