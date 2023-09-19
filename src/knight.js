@@ -6,9 +6,10 @@ export const Knight = () => {
 
   const knightImg = document.createElement("img");
   knightImg.src = knightSVG;
-  knightImg.classList.add("knight-img");
+  knightImg.classList.add("=knight-img");
   document.body.appendChild(knightImg);
 
+  // Moves the knight img by appending it to the square the knight is currently on
   const render = () => {
     const newSquare = document.querySelector(`.square-${x}${y}`);
     newSquare.appendChild(knightImg);

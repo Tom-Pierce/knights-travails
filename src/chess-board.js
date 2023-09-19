@@ -1,5 +1,6 @@
 import { createDiv } from "./create-dom-elements";
 
+// Creates a chessboard in  the DOM with 8 rows and 8 squares in each row like a 2D array
 export const createBoard = () => {
   const board = createDiv("board", "board");
   for (let i = 7; i > -1; i -= 1) {
@@ -11,11 +12,4 @@ export const createBoard = () => {
     board.appendChild(rowDiv);
   }
   document.body.appendChild(board);
-};
-
-export const samePos = (posOne, posTwo) => {
-  if (posOne[0] === posTwo[0] && posOne[1] === posTwo[1]) {
-    return true;
-  }
-  return false;
 };

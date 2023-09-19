@@ -1,3 +1,4 @@
+// The 8 possible moves a knight can take
 const movements = [
   [1, 2],
   [2, 1],
@@ -11,8 +12,10 @@ const movements = [
 
 export const chessSquare = (position, parent) => {
   const possibleMoves = [];
+  // Create and array of all possible moves from this square
   const createMovesArray = () => {
     movements.forEach((movement) => {
+      // Checks to see if any move is off of the board
       if (
         position[0] + movement[0] >= 0 &&
         position[0] + movement[0] <= 7 &&
