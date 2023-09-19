@@ -23,6 +23,7 @@ body {
 }
 
 .board {
+  border: 1px solid black;
   width: var(--chess-board-size);
   height: var(--chess-board-size);
   display: flex;
@@ -34,7 +35,6 @@ body {
 }
 
 .square {
-  border: 1px solid black;
   width: calc(var(--chess-board-size) / 8);
   height: calc(var(--chess-board-size) / 8);
 }
@@ -47,6 +47,11 @@ body {
   background-color: black;
 }
 
+.row:nth-child(even) .square:nth-child(odd):hover,
+.row:nth-child(odd) .square:nth-child(even):hover,
+.square:hover {
+  background-color: red;
+}
 .square .knight-img {
   width: 100%;
   height: 100%;
